@@ -1,0 +1,7 @@
+Linear Gradient:
+	left = 14429c;
+	right = #1E61E6;
+
+Card colors:
+	cards = #F3E0E1;
+	X, Y, B = 10;
