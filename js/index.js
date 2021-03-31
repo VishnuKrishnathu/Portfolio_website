@@ -1,44 +1,39 @@
-const t1 = new TimelineMax();
-const t2 = new TimelineMax();
-const t3 = new TimelineMax();
-const tp = new TimelineMax();
-const controller = new ScrollMagic.Controller();
+const labels = document.querySelectorAll(".project-list > label");
+const inputs = document.querySelectorAll(".project-list > input");
 
-tp.from(".cards", 1, {
-  x: "40vw",
-  width: "300px",
+const projects = {
+  React: {
+    name: ["React 1", "React 2", "React 3"],
+    link: ["#", "#"],
+  },
+  Python: {
+    name: ["Python project 1", "Python project 2", "Python project 3"],
+    link: ["#", "#", "#"],
+  },
+  Java: {
+    name: ["Anroid java project"],
+    link: ["#"],
+  },
+  generateInnerContent: function (label_text) {
+    let content = "";
+    // console.log(this[label_text]?.name);
+    let project_label = this[label_text];
+    let i = 0;
+    project_label.name.forEach((project) => {
+      content = content.concat(
+        `<a href=${project_label.link[i]}>${project}</a>`
+      );
+    });
+    return content;
+  },
+};
+labels.forEach((label) => {
+  label.addEventListener("click", (e) => {
+    inputs.forEach((input) => {
+      if (input.checked) {
+        let innercontent = projects.generateInnerContent(label.innerText);
+        document.querySelector("#project-list").innerHTML = innercontent;
+      }
+    });
+  });
 });
-t1.from("#skills", 1, {
-  rotationX: 60,
-  rotationY: 30,
-  x: "150%",
-});
-t2.from("#banking", 1, {
-  rotationX: 60,
-  rotationY: 30,
-});
-t3.from("#banking_anroid", 1, {
-  rotationX: 60,
-  rotationY: 30,
-  x: "-150%",
-});
-const scene = new ScrollMagic.Scene({
-  triggerElement: "#trigger",
-})
-  .setTween(t1)
-  .addTo(controller);
-const scene1 = new ScrollMagic.Scene({
-  triggerElement: "#trigger",
-})
-  .setTween(t2)
-  .addTo(controller);
-const scene2 = new ScrollMagic.Scene({
-  triggerElement: "#trigger",
-})
-  .setTween(t3)
-  .addTo(controller);
-const scene3 = new ScrollMagic.Scene({
-  triggerElement: "#trigger",
-})
-  .setTween(tp)
-  .addTo(controller);

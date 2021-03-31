@@ -1,0 +1,96 @@
+@import "./colors";
+.social-links {
+  span {
+    font-family: $font-style;
+    color: #fff;
+    font-weight: 500;
+    font-size: 2.3rem;
+    line-break: loose;
+    display: block;
+    height: 50%;
+    // padding-left: 25%;
+  }
+}
+.contact-form {
+  height: 50vh;
+  background: $primary-color;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  .social-links {
+    height: 50%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+  }
+  .social-accounts {
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+    div {
+      height: 30px;
+      width: 30px;
+    }
+    #linkedin {
+      background: url(../assets/linkedin.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    #github {
+      background: url(../assets/github.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: -10%;
+    bottom: 20%;
+    left: 0%;
+    right: 70%;
+    background: url(../assets/blob1.svg);
+    background-size: cover;
+    filter: blur(800px);
+    opacity: 0.9;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: -10%;
+    right: -15%;
+    left: 70%;
+    bottom: 30%;
+    background: url(../assets/blob2.svg);
+    opacity: 0.9;
+    filter: blur(800px);
+  }
+}
+.input-form {
+  display: flex;
+  width: 50vw;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+  z-index: 15;
+  input {
+    height: 2rem;
+    width: 50%;
+    padding-left: 0.8rem;
+    outline-color: $secondary-color;
+  }
+  button {
+    padding: 0.5rem 1.7rem;
+    border: none;
+    border-radius: 999px;
+    color: none;
+    font-family: $font-style;
+    font-weight: 500;
+    background-color: $secondary-color;
+    color: #fff;
+  }
+}

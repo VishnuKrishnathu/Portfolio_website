@@ -1,0 +1,443 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+section {
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section #project-view {
+  width: 70%;
+  height: 70%;
+  border: 3px solid #6d578e;
+  border-radius: 20px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section #project-view div.tabs {
+  height: 100%;
+  width: 30vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: radial-gradient(198.65% 273.43% at 75.58% 198.65%, #cc4962 0%, #6d578e 100%);
+}
+
+section #project-view div#project-list {
+  height: 100%;
+  width: 70vw;
+}
+
+.tabs ul {
+  list-style: none;
+  width: 100%;
+}
+
+.tabs ul li:first-child {
+  padding-top: 2.4rem;
+}
+
+.tabs ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  margin-left: 0.8rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.tabs ul li input {
+  opacity: 0;
+  position: absolute;
+}
+
+.tabs ul li input:checked + label {
+  background: white;
+  border-radius: 999px 0px 0px 999px;
+  color: #6d578e;
+}
+
+.tabs ul li label {
+  width: 80%;
+  height: 40%;
+  color: #fff;
+  padding: 0.6rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#project-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#project-list a {
+  margin-left: 2rem;
+  font-size: 1.2rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  background: radial-gradient(198.65% 273.43% at 75.58% 198.65%, #cc4962 0%, #6d578e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+
+#project-list a::before {
+  content: "";
+  position: absolute;
+  top: 96%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: radial-gradient(198.65% 273.43% at 75.58% 198.65%, #cc4962 0%, #6d578e 100%);
+}
+
+#project-list a:first-child {
+  margin-top: 2rem;
+  padding-top: 2rem;
+}
+
+#project-list a:first-child ~ a {
+  padding-top: 2rem;
+}
+
+.social-links span {
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  font-weight: 500;
+  font-size: 2.3rem;
+  line-break: loose;
+  display: block;
+  height: 50%;
+}
+
+.contact-form {
+  height: 50vh;
+  background: #6d578e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-form .social-links {
+  height: 50%;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 10;
+}
+
+.contact-form .social-accounts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.contact-form .social-accounts div {
+  height: 30px;
+  width: 30px;
+}
+
+.contact-form .social-accounts #linkedin {
+  background: url(../assets/linkedin.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.contact-form .social-accounts #github {
+  background: url(../assets/github.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.contact-form::before {
+  content: "";
+  position: absolute;
+  top: -10%;
+  bottom: 20%;
+  left: 0%;
+  right: 70%;
+  background: url(../assets/blob1.svg);
+  background-size: cover;
+  -webkit-filter: blur(800px);
+          filter: blur(800px);
+  opacity: 0.9;
+}
+
+.contact-form::after {
+  content: "";
+  position: absolute;
+  top: -10%;
+  right: -15%;
+  left: 70%;
+  bottom: 30%;
+  background: url(../assets/blob2.svg);
+  opacity: 0.9;
+  -webkit-filter: blur(800px);
+          filter: blur(800px);
+}
+
+.input-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50vw;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 100%;
+  z-index: 15;
+}
+
+.input-form input {
+  height: 2rem;
+  width: 50%;
+  padding-left: 0.8rem;
+  outline-color: #cc4962;
+}
+
+.input-form button {
+  padding: 0.5rem 1.7rem;
+  border: none;
+  border-radius: 999px;
+  color: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  background-color: #cc4962;
+  color: #fff;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#logo {
+  height: 30px;
+  padding: 1.3rem 3rem;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  z-index: 100;
+}
+
+nav .nav-tabs {
+  width: 50vw;
+}
+
+nav .nav-tabs ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  list-style: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  padding-top: 1.3rem;
+  font-size: 1.2rem;
+}
+
+nav .nav-tabs ul li:nth-child(1),
+nav .nav-tabs ul li:nth-child(2) {
+  color: #6d578e;
+}
+
+nav .nav-tabs ul li {
+  cursor: pointer;
+}
+
+nav .nav-tabs ul li button {
+  color: white;
+  font-size: 1.2rem;
+  background: radial-gradient(198.65% 273.43% at 75.58% 198.65%, #cc4962 0%, #6d578e 100%);
+  padding: 5px 10px;
+  outline-style: none;
+  border: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+nav .nav-tabs ul li button:hover {
+  background: radial-gradient(198.65% 273.43% at 75.58% 198.65%, #cc4962 0%, #cc4962 100%);
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main #left,
+main #right {
+  width: 50vw;
+  height: 100vh;
+}
+
+#left {
+  background: #6d578e;
+  position: relative;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#left #line1,
+#left #name {
+  z-index: 10;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  padding-left: 20%;
+  padding-top: 25px;
+}
+
+#left .blob {
+  position: absolute;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  left: -53%;
+  right: -10%;
+  top: -5%;
+  bottom: 0;
+  -webkit-filter: blur(1200px);
+          filter: blur(1200px);
+  opacity: 0.5;
+}
+
+#line1 {
+  font-size: 3.5rem;
+}
+
+#name {
+  font-size: 4.2rem;
+}
+
+#name span {
+  padding-top: 25px;
+  display: block;
+}
+
+#right {
+  position: relative;
+}
+
+#right img {
+  width: 50vw;
+  height: 70vh;
+  position: absolute;
+  bottom: 0%;
+  left: -10%;
+}
+
+.link {
+  position: relative;
+  padding: 7px;
+}
+
+.link::before {
+  content: "";
+  background: radial-gradient(198.65% 273.43% at 75.58% 198.65%, #cc4962 0%, #cc4962 100%);
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  bottom: 0px;
+  top: 93%;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.link:hover::before {
+  left: 0%;
+  right: 0%;
+}
+/*# sourceMappingURL=index.css.map */
