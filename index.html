@@ -4,19 +4,31 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/mobileview.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap"
+      rel="stylesheet"
+    />
     <title>Vishnu Krishnathu</title>
   </head>
   <body>
     <main>
       <nav>
-        <div id="logo">Logo goes here!!</div>
+        <div id="logo">
+          <img src="./assets/newlogo.svg " alt=">>Vishnu" height="25px" />
+        </div>
         <div class="nav-tabs">
-          <ul>
-            <li class="link home">Home</li>
-            <li class="link project">Projects</li>
-            <li><button>Contact Us</button></li>
-          </ul>
+          <div class="hamburger">
+            <div class="bar"></div>
+            <ul>
+              <a href="#left"><li class="link home">Home</li></a>
+              <a href="#project-view"><li class="link project">Projects</li></a>
+              <a href="#contact-form"
+                ><li><button>Contact Us</button></li></a
+              >
+            </ul>
+          </div>
         </div>
       </nav>
       <div id="left">
@@ -41,17 +53,23 @@
             <li class="project-list">
               <input type="radio" name="radio" id="radio1" checked="checked" />
               <label for="radio1">React</label>
-              <div class="project-logo">logo</div>
+              <div class="project-logo">
+                <img src="./assets/react.svg" alt="React" srcset="" />
+              </div>
             </li>
             <li class="project-list">
               <input type="radio" name="radio" id="radio2" />
               <label for="radio2">Python</label>
-              <div class="project-logo">logo</div>
+              <div class="project-logo">
+                <img src="./assets/python.svg" alt="Python" srcset="" />
+              </div>
             </li>
             <li class="project-list">
               <input type="radio" name="radio" id="radio3" />
               <label for="radio3">Java</label>
-              <div class="project-logo">logo</div>
+              <div class="project-logo">
+                <img src="./assets/java.svg" alt="Java" srcset="" />
+              </div>
             </li>
           </ul>
         </div>
@@ -62,7 +80,7 @@
         </div>
       </div>
     </section>
-    <div class="contact-form">
+    <div id="contact-form">
       <div class="social-links">
         <span>Lets Connect</span>
         <div class="social-accounts">
@@ -82,5 +100,6 @@
       </div>
     </div>
     <script src="./js/index.js"></script>
+    <!--<script src="./js/mobileview.js"></script>-->
   </body>
 </html>

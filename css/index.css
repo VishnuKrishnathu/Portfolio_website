@@ -81,7 +81,7 @@ section #project-view div#project-list {
   height: 40%;
   color: #fff;
   padding: 0.6rem;
-  font-family: "Roboto", sans-serif;
+  font-family: "Ubuntu Mono", monospace;
   font-size: 1.2rem;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -103,7 +103,7 @@ section #project-view div#project-list {
 #project-list a {
   margin-left: 2rem;
   font-size: 1.2rem;
-  font-family: "Roboto", sans-serif;
+  font-family: "Ubuntu Mono", monospace;
   font-weight: 700;
   text-decoration: none;
   background: radial-gradient(198.65% 273.43% at 75.58% 198.65%, #cc4962 0%, #6d578e 100%);
@@ -131,8 +131,27 @@ section #project-view div#project-list {
   padding-top: 2rem;
 }
 
+.project-logo {
+  width: 35px;
+  height: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.project-logo img {
+  height: 100%;
+  width: 100%;
+}
+
 .social-links span {
-  font-family: "Roboto", sans-serif;
+  font-family: "Ubuntu Mono", monospace;
   color: #fff;
   font-weight: 500;
   font-size: 2.3rem;
@@ -141,7 +160,7 @@ section #project-view div#project-list {
   height: 50%;
 }
 
-.contact-form {
+#contact-form {
   height: 50vh;
   background: #6d578e;
   display: -webkit-box;
@@ -154,7 +173,7 @@ section #project-view div#project-list {
   overflow: hidden;
 }
 
-.contact-form .social-links {
+#contact-form .social-links {
   height: 50%;
   width: 50%;
   display: -webkit-box;
@@ -170,7 +189,7 @@ section #project-view div#project-list {
   z-index: 10;
 }
 
-.contact-form .social-accounts {
+#contact-form .social-accounts {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -180,24 +199,24 @@ section #project-view div#project-list {
           justify-content: space-evenly;
 }
 
-.contact-form .social-accounts div {
+#contact-form .social-accounts div {
   height: 30px;
   width: 30px;
 }
 
-.contact-form .social-accounts #linkedin {
+#contact-form .social-accounts #linkedin {
   background: url(../assets/linkedin.svg);
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-.contact-form .social-accounts #github {
+#contact-form .social-accounts #github {
   background: url(../assets/github.svg);
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-.contact-form::before {
+#contact-form::before {
   content: "";
   position: absolute;
   top: -10%;
@@ -211,7 +230,7 @@ section #project-view div#project-list {
   opacity: 0.9;
 }
 
-.contact-form::after {
+#contact-form::after {
   content: "";
   position: absolute;
   top: -10%;
@@ -255,7 +274,7 @@ section #project-view div#project-list {
   border: none;
   border-radius: 999px;
   color: none;
-  font-family: "Roboto", sans-serif;
+  font-family: "Ubuntu Mono", monospace;
   font-weight: 500;
   background-color: #cc4962;
   color: #fff;
@@ -308,10 +327,14 @@ nav .nav-tabs ul {
           align-items: center;
   width: 100%;
   list-style: none;
-  font-family: "Roboto", sans-serif;
+  font-family: "Ubuntu Mono", monospace;
   font-weight: 400;
   padding-top: 1.3rem;
   font-size: 1.2rem;
+}
+
+nav .nav-tabs ul a {
+  text-decoration: none;
 }
 
 nav .nav-tabs ul li:nth-child(1),
@@ -375,7 +398,7 @@ main #right {
 #left #name {
   z-index: 10;
   color: white;
-  font-family: "Roboto", sans-serif;
+  font-family: "Ubuntu Mono", monospace;
   font-weight: 400;
   padding-left: 20%;
   padding-top: 25px;
