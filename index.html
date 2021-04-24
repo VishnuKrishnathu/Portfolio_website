@@ -4,102 +4,59 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/mobileview.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap"
       rel="stylesheet"
     />
+	<link rel="stylesheet" href="css/index.css" />
     <title>Vishnu Krishnathu</title>
   </head>
   <body>
-    <main>
-      <nav>
-        <div id="logo">
-          <img src="./assets/newlogo.svg " alt=">>Vishnu" height="25px" />
-        </div>
-        <div class="nav-tabs">
-          <div class="hamburger">
-            <div class="bar"></div>
-            <ul>
-              <a href="#left"><li class="link home">Home</li></a>
-              <a href="#project-view"><li class="link project">Projects</li></a>
-              <a href="#contact-form"
-                ><li><button>Contact Us</button></li></a
-              >
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <div id="left">
-        <div id="line1">Hey, I'm</div>
-        <div id="name">Vishnu <span>Krishnathu</span></div>
-        <div class="blob">
-          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <path
-              fill="#CC4962"
-              d="M47.4,-10C57.2,14.7,58,47.8,40.5,62C23,76.2,-12.8,71.5,-31.1,55.2C-49.5,39,-50.4,11.1,-42.3,-11.2C-34.3,-33.6,-17.1,-50.5,0.8,-50.8C18.8,-51.1,37.6,-34.7,47.4,-10Z"
-              transform="translate(100 100)"
-            />
-          </svg>
-        </div>
-      </div>
-      <div id="right"><img src="./assets/drawing1.png" /></div>
-    </main>
-    <section>
-      <div id="project-view">
-        <div class="tabs">
-          <ul>
-            <li class="project-list">
-              <input type="radio" name="radio" id="radio1" checked="checked" />
-              <label for="radio1">React</label>
-              <div class="project-logo">
-                <img src="./assets/react.svg" alt="React" srcset="" />
-              </div>
-            </li>
-            <li class="project-list">
-              <input type="radio" name="radio" id="radio2" />
-              <label for="radio2">Python</label>
-              <div class="project-logo">
-                <img src="./assets/python.svg" alt="Python" srcset="" />
-              </div>
-            </li>
-            <li class="project-list">
-              <input type="radio" name="radio" id="radio3" />
-              <label for="radio3">Java</label>
-              <div class="project-logo">
-                <img src="./assets/java.svg" alt="Java" srcset="" />
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div id="project-list">
-          <a href="#">React 1</a>
-          <a href="#">React 2</a>
-          <a href="#">React 3</a>
-        </div>
-      </div>
-    </section>
-    <div id="contact-form">
-      <div class="social-links">
-        <span>Lets Connect</span>
-        <div class="social-accounts">
-          <a href="https://www.google.com"> <div id="linkedin"></div></a>
-          <a href="https://www.github.com"><div id="github"></div></a>
-        </div>
-      </div>
-      <div class="input-form">
-        <input type="text" placeholder="Your name" id="c-name" />
-        <input type="email" placeholder="Your email" id="c-email" />
-        <input
-          type="text"
-          placeholder="Project Details"
-          id="c-projectDetails"
-        />
-        <button>Send</button>
-      </div>
-    </div>
-    <script src="./js/index.js"></script>
-    <!--<script src="./js/mobileview.js"></script>-->
+	  <header>
+		  <div class="hamburger-menu">
+			  <div></div>
+			  <div class="nav_options">
+				  <span><a href="#">Home</a></span>
+				  <span><a href="#">Projects</a></span>
+				  <span><a href="#">Contact Us</a></span>
+			  </div>
+		  </div>
+		  <div id="logo">LOGO</div>
+	  </header>
+	  <main>
+		  <div class='intro'>
+			  <span>Hey I'm</span>
+			  <span>Vishnu</span>
+			  <span>Krishnathu</span>
+		  </div>
+		  <img class="mobile_svg" src="assets/mobile_asset.svg"/>
+		  <img class="web_svg" src="assets/portfolio.svg"/>
+		  <div id="white_div"></div>
+	  </main>
+	  <strong style="color:#956416">Projects :</strong>
+	  <section class="projects">
+		  <div><a href="https://basicbanking-system1.herokuapp.com/">Banking System(Django)</a></div>
+		  <div><a href="#">Webletter App (React+Django)</a></div>
+		  <div><a href="https://github.com/VishnuKrishnathu/BankingSystem_anroidapp">Banking App (Anroid)</a></div>
+		  <div><a href="https://github.com/VishnuKrishnathu/Project-Based-Learning">Virtual Laboratory (Python)</a></div>
+	  </section>
+	  <div class="contact-page">
+		  <span>
+			  Let's Connect
+			  <a href="https://github.com/VishnuKrishnathu"><img src="assets/github.svg" height="24px" width="24px"/></a>
+			  <a href="#"><img src="assets/linkedin.svg" height="24px" width="24px"/></a>
+		  </span>
+		  <div class="form_data">
+			  <input id="name" type="text" placeholder="Your Name"/>
+			  <input id="email" type="email" placeholder="Your Email"/>
+			  <input id="proj_details" type="text" placeholder="Project Details"/>
+			  <button id="submit_butt">Submit</button>
+		  </div>
+	  </div>
+
+
+
+
+	  <script src="js/index.js"></script>
   </body>
 </html>
