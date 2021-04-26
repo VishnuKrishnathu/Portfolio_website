@@ -1,0 +1,9 @@
+$primary-color: #f9a726;
+$secondary-color: #956416;
+$font-family: 'Ubuntu Mono', monospace;
+@mixin CenterAlign($flex-direction, $align-items, $justify-content){
+	display: flex;
+	flex-direction: $flex-direction;
+	align-items: $align-items;
+	justify-content: $justify-content;
+}

@@ -1,3 +1,144 @@
+@media only screen and (min-width: 651px) {
+  header {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    background: #f9a726;
+    height: 7vh;
+  }
+  header .hamburger-menu {
+    display: contents;
+  }
+  header .hamburger-menu div:first-child {
+    display: none;
+  }
+  header .hamburger-menu .nav_options {
+    width: 55%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+  }
+  header .hamburger-menu .nav_options span > a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3rem;
+    position: relative;
+    overflow: hidden;
+  }
+  header .hamburger-menu .nav_options span > a::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    top: 100%;
+    background: #956416;
+    transition: 0.2s;
+  }
+  header .hamburger-menu .nav_options span > a:hover::after {
+    top: 85%;
+  }
+  header #logo {
+    padding-left: 2rem;
+  }
+
+  main {
+    background: #f9a726;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 65vh;
+  }
+  main .intro {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  main .intro span {
+    display: block;
+    color: #fff;
+    margin-left: 2vw;
+    position: relative;
+  }
+  main .intro span:first-child {
+    font-size: 2.9rem;
+    padding-bottom: 1rem;
+  }
+  main .intro span:nth-child(2), main .intro span:nth-child(3) {
+    font-size: 5rem;
+    padding-bottom: 1.8rem;
+  }
+  main .mobile_svg {
+    display: none;
+  }
+  main .web_svg {
+    width: 50%;
+    height: 90%;
+  }
+
+  strong {
+    padding: 2rem;
+    display: flow-root;
+  }
+
+  .projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 3rem;
+    place-items: center;
+  }
+  .projects > div {
+    width: 200px;
+    height: 120px;
+    background: red;
+  }
+
+  .contact-page {
+    margin-top: 3rem;
+    background: #f9a726;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact-page > span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    padding-left: 10%;
+  }
+  .contact-page > span #github > img, .contact-page > span #linkedin > img {
+    width: 32px;
+    height: 32px;
+  }
+  .contact-page > span > div {
+    font-size: 2.8rem;
+  }
+  .contact-page .form_data {
+    width: 50%;
+    height: 100%;
+  }
+  .contact-page .form_data > input {
+    width: 70%;
+    padding: 0.5rem 1.2rem;
+    font-size: 1.1rem;
+  }
+  .contact-page .form_data #submit_butt {
+    padding: 0.5rem 1rem;
+  }
+}
 *, *::after, *::before {
   margin: 0px;
   padding: 0px;
@@ -5,144 +146,25 @@
   font-family: "Ubuntu Mono", monospace;
 }
 
-header {
-  background: #f9a726;
-  height: 7vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 11;
+#logo {
+  height: 6.5vh;
 }
-header #logo {
-  padding-right: 1.5rem;
-}
-header .hamburger-menu {
-  height: 5vh;
-  width: 6vh;
-  margin-left: 0.5rem;
-  cursor: pointer;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-}
-header .hamburger-menu .nav_options {
-  transition: 0.3s;
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  opacity: 0.9;
-  width: 130px;
-  height: 150px;
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-around;
-  transform: translateY(-7.1vh) translateY(0%);
-  background: #956416;
-}
-header .hamburger-menu .nav_options span {
-  display: block;
-  font-size: 1.3rem;
-  padding: 3px;
-  width: 100%;
-  border-radius: 999px;
-}
-header .hamburger-menu .nav_options span:hover {
-  background: #72351c;
-}
-header .hamburger-menu .nav_options span a {
-  text-decoration: none;
-  color: #fff;
-}
-header .hamburger-menu div:first-child {
-  height: 20%;
-  width: 100%;
-  background: #956416;
-  margin: 0px;
-  padding: 0px;
-}
-header .hamburger-menu::before {
-  height: 20%;
-  content: "";
-  width: 100%;
-  background: #956416;
-}
-header .hamburger-menu::after {
-  height: 20%;
-  width: 100%;
-  content: "";
-  background: #956416;
+#logo > img {
+  height: 100%;
+  width: auto;
 }
 
-main {
-  background: #f9a726;
-  position: relative;
-  height: 100vh;
-}
-main .intro {
-  height: 93vh;
-  padding: 2rem 0rem 0rem 0.7rem;
-}
-main .intro span:first-child {
-  font-size: 1.5rem;
-}
-main .intro span {
-  display: block;
-  color: #fff;
-  padding: 0.3rem;
-}
-main .intro span:nth-child(2), main .intro span:nth-child(3) {
-  font-size: 3.5rem;
-}
-main .mobile_svg {
-  width: 100%;
-  height: auto;
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  z-index: 3;
-}
-main .web_svg {
-  display: none;
-  position: absolute;
-}
-main #white_div {
-  position: absolute;
-  bottom: 0px;
-  top: 90%;
-  left: 0px;
-  right: 0px;
-  z-index: 2;
-  background: #fff;
-}
-
-.projects {
-  width: 100%;
-  margin-top: 10px;
-  height: 480px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-}
-.projects div:nth-child(1)::before {
-  background-image: url("../assets/Bank.jpg");
-}
 .projects > div {
-  width: 50%;
-  height: 100px;
+  background: #000;
   position: relative;
-  padding-left: 3px;
   overflow: hidden;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background: #000;
+}
+.projects > div:nth-child(1)::before {
+  background-image: url("../assets/Bank.jpg");
 }
 .projects > div::before {
   content: "";
@@ -161,49 +183,196 @@ main #white_div {
   height: 24px;
 }
 
-.contact-page {
-  background: #f9a726;
+.form_data {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
 }
-.contact-page > span {
-  padding: 1.2rem 0;
-  font-size: 1.5rem;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
-}
-.contact-page .form_data {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  width: 100%;
-  padding-bottom: 0.3rem;
-}
-.contact-page .form_data input {
-  width: 70%;
-  margin-bottom: 0.7rem;
+.form_data input {
   outline-style: none;
   color: #956416;
   border-radius: 999px;
   border: none;
-  padding: 0.4rem 0 0.4rem 0.3rem;
 }
-.contact-page .form_data #submit_butt {
+
+#submit_butt {
+  border: none;
   outline-style: none;
   border-radius: 999px;
-  padding: 0.3rem 1rem;
-  border: none;
   color: #956416;
 }
-.contact-page .form_data #submit_butt:hover {
+#submit_butt:hover {
   background: #72351c;
   color: #fff;
+}
+
+@media only screen and (max-width: 650px) {
+  header {
+    background: #f9a726;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 11;
+  }
+  header #logo {
+    padding-right: 1.5rem;
+  }
+  header .hamburger-menu {
+    height: 5vh;
+    width: 6vh;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  header .hamburger-menu .nav_options {
+    transition: 0.3s;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.9;
+    width: 130px;
+    height: 150px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    transform: translateY(-7.1vh) translateY(0%);
+    background: #956416;
+  }
+  header .hamburger-menu .nav_options span {
+    display: block;
+    font-size: 1.3rem;
+    padding: 3px;
+    width: 100%;
+    border-radius: 999px;
+  }
+  header .hamburger-menu .nav_options span:hover {
+    background: #72351c;
+  }
+  header .hamburger-menu .nav_options span a {
+    text-decoration: none;
+    color: #fff;
+  }
+  header .hamburger-menu div:first-child {
+    height: 20%;
+    width: 100%;
+    background: #956416;
+    margin: 0px;
+    padding: 0px;
+  }
+  header .hamburger-menu::before {
+    height: 20%;
+    content: "";
+    width: 100%;
+    background: #956416;
+  }
+  header .hamburger-menu::after {
+    height: 20%;
+    width: 100%;
+    content: "";
+    background: #956416;
+  }
+
+  main {
+    background: #f9a726;
+    position: relative;
+    height: 100vh;
+  }
+  main .intro {
+    height: 93vh;
+    padding: 2rem 0rem 0rem 0.7rem;
+  }
+  main .intro span:first-child {
+    font-size: 1.5rem;
+  }
+  main .intro span {
+    display: block;
+    color: #fff;
+    padding: 0.3rem;
+  }
+  main .intro span:nth-child(2), main .intro span:nth-child(3) {
+    font-size: 3.5rem;
+  }
+  main .mobile_svg {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 3;
+  }
+  main .web_svg {
+    display: none;
+    position: absolute;
+  }
+  main #white_div {
+    position: absolute;
+    bottom: 0px;
+    top: 90%;
+    left: 0px;
+    right: 0px;
+    z-index: 2;
+    background: #fff;
+  }
+
+  .projects {
+    width: 100%;
+    margin-top: 10px;
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .projects > div {
+    width: 50%;
+    height: 100px;
+    padding-left: 3px;
+  }
+
+  .contact-page {
+    background: #f9a726;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .contact-page > div {
+    display: contents;
+  }
+  .contact-page span {
+    padding: 1.2rem 0;
+    font-size: 1.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .contact-page span #github > img, .contact-page span #linkedin > img {
+    width: 24px;
+    height: 24px;
+  }
+  .contact-page .form_data {
+    width: 100%;
+    padding-bottom: 0.3rem;
+  }
+  .contact-page .form_data input {
+    width: 70%;
+    margin-bottom: 0.7rem;
+    padding: 0.4rem 0 0.4rem 0.3rem;
+  }
+  .contact-page .form_data #submit_butt {
+    padding: 0.3rem 1rem;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

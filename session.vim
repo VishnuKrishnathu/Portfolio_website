@@ -7,14 +7,16 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +53 index.html
-badd +44 css/index.scss
-badd +15 js/index.ts
+badd +45 index.html
+badd +46 css/index.scss
+badd +7 js/index.ts
 badd +1 js/index.js
+badd +2 css/_modules.scss
+badd +1 css/_desktop.scss
 argglobal
 %argdel
 $argadd index.html
-edit css/index.scss
+edit css/_desktop.scss
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
@@ -39,12 +41,12 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 32 - ((31 * winheight(0) + 25) / 50)
+let s:l = 112 - ((32 * winheight(0) + 25) / 50)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-32
-normal! 024|
+112
+normal! 019|
 wincmd w
 argglobal
 if bufexists("index.html") | buffer index.html | else | edit index.html | endif
@@ -57,12 +59,12 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 46 - ((31 * winheight(0) + 25) / 50)
+let s:l = 46 - ((45 * winheight(0) + 25) / 50)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 46
-normal! 059|
+normal! $
 wincmd w
 2wincmd w
 exe 'vert 1resize ' . ((&columns * 96 + 96) / 193)

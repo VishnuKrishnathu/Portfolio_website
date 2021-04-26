@@ -1,145 +1,29 @@
-$primary-color: #f9a726;
-$secondary-color: #956416;
-$font-family: 'Ubuntu Mono', monospace;
-@mixin CenterAlign($flex-direction, $align-items, $justify-content){
-	display: flex;
-	flex-direction: $flex-direction;
-	align-items: $align-items;
-	justify-content: $justify-content;
-}
-
+@import "desktop";
+@import "modules";
 *, *::after, *::before{
 	margin: 0px;
 	padding: 0px;
 	box-sizing: border-box;
 	font-family:$font-family;
 }
+#logo{
+	height: 6.5vh;
+	&>img{
+		height: 100%;
+		width: auto;
+	}
+}
 
-header{
-	background: $primary-color;
-	height: 7vh;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	z-index: 11;
-	#logo{
-		padding-right:1.5rem;
-	}
-	.hamburger-menu{
-		height: 5vh;
-		width : 6vh;
-		margin-left: 0.5rem;
-		cursor: pointer;
+.projects>div{
+		background: #000;
 		position: relative;
-		@include CenterAlign(column, center, space-around);
-		.nav_options{
-			transition: 0.3s;
-			position: absolute;
-			bottom:0px;
-			left: 0px;
-			opacity: 0.9;
-			width: 130px;
-			height: 150px;
-			z-index:10;
-			@include CenterAlign(column, flex-start, space-around);
-			transform:translateY(-7.1vh) translateY(0%);
-			background: $secondary-color;
-			span{
-				display:block;
-				font-size:1.3rem;
-				padding: 3px;
-				width: 100%;
-				border-radius: 999px;
-				&:hover{
-					background: #72351c;
-				}
-				a{
-					text-decoration: none;
-					color:#fff;
-				}
-			}
-		}
-		div:first-child{
-			height:20%; 
-			width: 100%;
-			background: $secondary-color;
-			margin:0px;
-			padding:0px
-		}
-		&::before{
-			height: 20%;
-			content:"";
-			width: 100%;
-			background: $secondary-color;
-		}
-		&::after{
-			height: 20%;
-			width: 100%;
-			content:"";
-			background: $secondary-color;
-		}
-	}
-}
-main{
-	background: $primary-color;
-	position:relative;
-	height: 100vh;
-	.intro{
-		height:93vh;
-		padding: 2rem 0rem 0rem 0.7rem;
-		span:first-child{
-			font-size: 1.5rem;
-		}
-		span{
-			display: block;
-			color: #fff;
-			padding: 0.3rem;
-			&:nth-child(2), &:nth-child(3){
-				font-size: 3.5rem;
-			}
-		}
-	}
-	.mobile_svg{
-		width: 100%;
-		height:auto;
-		position: absolute;
-		bottom: 0px;
-		left: 0px;
-		right: 0px;
-		z-index: 3;
-	}
-	.web_svg{
-		display:none;
-		position: absolute;
-	}
-	#white_div{
-		position:absolute;
-		bottom: 0px;
-		top: 90%;
-		left:0px;
-		right: 0px;
-		z-index:2;
-		background: #fff;
-	}
-}
-.projects{
-	width:100%;
-	margin-top: 10px;
-	height: 480px;
-	@include CenterAlign(column, center, space-evenly);
-	div:nth-child(1){
-		&::before{
-			background-image: url("../assets/Bank.jpg");
-		}
-	}
-	&>div{
-		width: 50%;
-		height: 100px;
-		position: relative;
-		padding-left: 3px;
 		overflow: hidden;
 		@include CenterAlign(row, center, space-between);
-		background: #000;
+		&:nth-child(1){
+			&::before{
+				background-image: url("../assets/Bank.jpg");
+			}
+		}
 		&::before{
 			content:"";
 			position: absolute;
@@ -156,40 +40,174 @@ main{
 			position: relative;
 			height: 24px;
 		}
+}
+.form_data{
+	@include CenterAlign(column, center, space-around);
+	input{
+		outline-style: none;
+		color:$secondary-color;
+		border-radius: 999px;
+		border:none;
 	}
 }
-
-.contact-page{
-	background: $primary-color;
-	@include CenterAlign(column, center, space-around);
-	&>span{
-		padding: 1.2rem 0;
-		font-size: 1.5rem;
-		width: 100%;
-		@include CenterAlign(row, center, space-evenly);
+#submit_butt{
+	border:none;
+	outline-style: none;
+	border-radius: 999px;
+	color: $secondary-color;
+	&:hover{
+		background: #72351c;
+		color: #fff;
 	}
-	.form_data{
-		@include CenterAlign(column, center, space-around);
-		width: 100%;
-		padding-bottom: 0.3rem;
-		input{
-			width:70%;
-			margin-bottom: 0.7rem;
-			outline-style: none;
-			color:$secondary-color;
-			border-radius: 999px;
-			border:none;
-			padding: 0.4rem 0 0.4rem 0.3rem;
+}
+@media only screen and (max-width: 650px){
+	header{
+		background: $primary-color;
+		height: 7vh;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		z-index: 11;
+		#logo{
+			padding-right:1.5rem;
 		}
-		#submit_butt{
-			outline-style: none;
-			border-radius: 999px;
-			padding: 0.3rem 1rem;
-			border:none;
-			color: $secondary-color;
-			&:hover{
-				background: #72351c;
+		.hamburger-menu{
+			height: 5vh;
+			width : 6vh;
+			margin-left: 0.5rem;
+			cursor: pointer;
+			position: relative;
+			@include CenterAlign(column, center, space-around);
+			.nav_options{
+				transition: 0.3s;
+				position: absolute;
+				bottom:0px;
+				left: 0px;
+				opacity: 0.9;
+				width: 130px;
+				height: 150px;
+				z-index:10;
+				@include CenterAlign(column, flex-start, space-around);
+				transform:translateY(-7.1vh) translateY(0%);
+				background: $secondary-color;
+				span{
+					display:block;
+					font-size:1.3rem;
+					padding: 3px;
+					width: 100%;
+					border-radius: 999px;
+					&:hover{
+						background: #72351c;
+					}
+					a{
+						text-decoration: none;
+						color:#fff;
+					}
+				}
+			}
+			div:first-child{
+				height:20%; 
+				width: 100%;
+				background: $secondary-color;
+				margin:0px;
+				padding:0px
+			}
+			&::before{
+				height: 20%;
+				content:"";
+				width: 100%;
+				background: $secondary-color;
+			}
+			&::after{
+				height: 20%;
+				width: 100%;
+				content:"";
+				background: $secondary-color;
+			}
+		}
+	}
+	main{
+		background: $primary-color;
+		position:relative;
+		height: 100vh;
+		.intro{
+			height:93vh;
+			padding: 2rem 0rem 0rem 0.7rem;
+			span:first-child{
+				font-size: 1.5rem;
+			}
+			span{
+				display: block;
 				color: #fff;
+				padding: 0.3rem;
+				&:nth-child(2), &:nth-child(3){
+					font-size: 3.5rem;
+				}
+			}
+		}
+		.mobile_svg{
+			width: 100%;
+			height:auto;
+			position: absolute;
+			bottom: 0px;
+			left: 0px;
+			right: 0px;
+			z-index: 3;
+		}
+		.web_svg{
+			display:none;
+			position: absolute;
+		}
+		#white_div{
+			position:absolute;
+			bottom: 0px;
+			top: 90%;
+			left:0px;
+			right: 0px;
+			z-index:2;
+			background: #fff;
+		}
+	}
+	.projects{
+		width:100%;
+		margin-top: 10px;
+		height: 480px;
+		@include CenterAlign(column, center, space-evenly);
+		&>div{
+			width: 50%;
+			height: 100px;
+			padding-left: 3px;
+		}
+	}
+
+	.contact-page{
+		background: $primary-color;
+		@include CenterAlign(column, center, space-around);
+		&>div{
+			display: contents;
+		}
+		span{
+			padding: 1.2rem 0;
+			font-size: 1.5rem;
+			width: 100%;
+			@include CenterAlign(row, center, space-evenly);
+			#github, #linkedin{
+				&>img{
+					width: 24px;
+					height: 24px;
+				}
+			}
+		}
+		.form_data{
+			width: 100%;
+			padding-bottom: 0.3rem;
+			input{
+				width:70%;
+				margin-bottom: 0.7rem;
+				padding: 0.4rem 0 0.4rem 0.3rem;
+			}
+			#submit_butt{
+				padding: 0.3rem 1rem;
 			}
 		}
 	}
