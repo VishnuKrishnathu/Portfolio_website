@@ -24,6 +24,21 @@
 				background-image: url("../assets/Bank.jpg");
 			}
 		}
+		&:nth-child(2){
+			&::before{
+				background-image: url("../assets/react-min.png");
+			}
+		}
+		&:nth-child(3){
+			&::before{
+				background-image: url("../assets/anroid.png");
+			}
+		}
+		&:nth-child(4){
+			&::before{
+				background-image: url("../assets/mech_instrument.jpg");
+			}
+		}
 		&::before{
 			content:"";
 			position: absolute;
